@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="login.js"></script> -->
+</head>
+<body background="image/bg.jpg">
+  <!-- Default form register -->
+  <div class="signup">
+      <div class="form-group has-error has-feedback">
+<form class="text-center border border-info p-3" id="form" action="Login.html" onsubmit="return validate();">
+    <p class="h4 mb-4">Sign up</p>
+    <div class="form-row sm-8">
+        <div class="col">
+            <!-- First name --> 
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control  " placeholder="First name" required> 
+            <span id="error1"></span>
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" required>
+            <span id="error2"></span>
+        </div>
+    </div>
+    <br>
+    <!-- E-mail -->
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="hello@example.com" required> 
+    <span id="error3"></span>
+
+    <!-- Password -->
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" onkeyup="verifypwd(this.value)" required>
+    <input type="checkbox" onclick="Toggle();"> 
+    <b>Show Password</b>
+    <span id="error4"></span>
+
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters with 1 uppercase,lowercase and 1 digit
+    </small>
+
+    <input type="password" id="cnfmpswd" class="form-control" placeholder="confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+    <span id="error5"></span>
+
+    <br>
+    
+            <!-- Phone Number -->
+            <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone Number" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
+            <span id="error7"></span>
+            <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                Optional - for two step authentication
+            </small>
+        
+        <!-- city and zipcode -->
+    
+    <!-- hdbcjhbhcja,jh -->
+       
+    <button type="submit" class="btn btn-info my-4 btn-block bg-danger"  value='click here'>Register</button>
+
+</form>
+<!-- Default form register -->
+</div>
+</div>
+<!-- <div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  </div> -->
+<script src="vald.js"></script>
+</body>
+</html>

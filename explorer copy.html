@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Explorer</title>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="explorer.js"></script>
+</head>
+
+</head>
+<body>
+  <h1><center>Explore Kerala</center></h1> 
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card" style="margin-top: 15%;">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="data:image/jpeg;base64,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"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Thiruvananthapuram</h4>
+          <!--Text-->
+          <p class="card-text">Thiruvananthapuram District is the southernmost district of the coastal state of Kerala. The district was created in 1957, with its headquarters in the city of Thiruvananthapuram (Trivandrum), which is also Kerala's capital.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card" style="margin-top: 15%;">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Kollam</h4>
+          <!--Text-->
+          <p class="card-text">Kollam district (formerly Quilon) is one of 14 districts of the state of Kerala, India. The district has a cross-section of Kerala's natural attributes; it is endowed with a long coastline, a major Laccadive Sea seaport and an inland lake (Ashtamudi Lake).</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card" style="margin-top: 15%;">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Alappuzha</h4>
+          <!--Text-->
+          <p class="card-text">Alappuzha (About this soundpronunciation (help·info)) is one of the 14 districts in the state of Kerala in India.It is the smallest district in Kerala. It was formed as Alleppey District on 17 August 1957. The name of the district was officially changed to Alappuzha in 1990.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card" style="margin-top: 15%;">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Pathanamthitta</h4>
+          <!--Text-->
+          <p class="card-text">Pathanamthitta District is a district in the southern part of Kerala, India. The district headquarters is in the town of Pathanamthitta. There are four municipalities in Pathanamthitta: Tiruvalla, Adoor, Pathanamthitta and Pandalam.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Kottayam</h4>
+          <!--Text-->
+          <p class="card-text">The Kottayam District is one of fourteen districts in the state of Kerala, India. Kottayam comprises six municipal towns: Kottayam, Changanassery, Pala, Erattupetta, Ettumanoor, and Vaikom. It is the only district in Kerala that does not border the Arabian Sea or any other states</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Idukki</h4>
+          <!--Text-->
+          <p class="card-text">
+            Idukki is a district in the Indian state of Kerala.It was constituted on 26 January 1972, by splitting the district of Kottayam into two parts.Idukki district lies amid the Western Ghats of Kerala.
+          </p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Ernakulam</h4>
+          <!--Text-->
+          <p class="card-text">
+            Ernakulam is a district of Kerala, India. Situated in the central part of that state. Spanning an area of about 2,407 km2, Ernakulam district is home to over 12% of Kerala’s population. Its headquarters is located at Kakkanad</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Thrissur</h4>
+          <!--Text-->
+          <p class="card-text">Thrissur (formerly Trichur) is a revenue district of Kerala situated in the central part of that state. Spanning an area of about 3,032 km2, Thrissur district is home to over 10% of Kerala's population.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Palakkad</h4>
+          <!--Text-->
+          <p class="card-text">Palakkad District is one of the 14 districts of the South Indian state of Kerala. Also, it is the largest district in Kerala from 2006.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Malappuram</h4>
+          <!--Text-->
+          <p class="card-text">Malappuram is a city in the Indian state of Kerala, spread over an area of 33.61 km2 (12.98 sq mi). The first municipality in the district formed in 1969, Malappuram serves as the administrative headquarters of Malappuram district.</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+        <!--Card content-->
+        <div class="card-body">
+  
+          <!--Title-->
+          <h4 class="card-title">Kozhikode</h4>
+          <!--Text-->
+          <p class="card-text">Kozhikode District or Calicut district is a district of Kerala state, on the southwest coast of India. The city of Kozhikode, also known as Calicut, is the district headquarters. The district is 38.25% urbanised.
+
+          </p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col mb-4">
+      <!-- Card -->
+      <div class="card">
+  
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+            alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div> 
+   
+        <!--Card content-->
+         <div class="card-body"> 
+  
+          <!--Title-->
+          <h4 class="card-title">Wayanadu</h4>
+          <!--Text-->
+          <p class="card-text">Wayanad is an Indian district in the north-east of Kerala state with administrative headquarters at the municipality of Kalpetta. It is set high on the Western Ghats with altitudes ranging from 700 to 2100 meters</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons\ -->
+          <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+  
+        </div>
+  
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-4">
+  <div class="col mb-4">
+    <!-- Card -->
+    <div class="card">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+          alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div> -->
+
+      <!--Card content-->
+      <!-- <div class="card-body"> -->
+
+        <!--Title-->
+        <!-- <h4 class="card-title">Kannur</h4> -->
+        <!--Text-->
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the -->
+          <!-- card's content.</p> -->
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <!-- <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button> -->
+
+      </div>
+
+    </div>
+    <!-- Card -->
+  </div>
+  <div class="col mb-4">
+    <!-- Card -->
+    <div class="card">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+          alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title">Kannur</h4>
+        <!--Text-->
+        <p class="card-text">Kannur is one of the 14 districts along the west coast in the state of Kerala, India. The town of Kannur is the district headquarters and gives the district its name. The old name, Cannanore is the anglicised form of the Malayalam name "Kannur"</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-light-blue btn-md bg-danger" onClick="location.href='Tvm.html'" value='click here'>Read more</button>
+        <!-- <button type="button" class="btn btn-info my-4 btn-block bg-danger" onClick="location.href='explorer.html'" value='click here'>Log in</button> -->
+      </div>
+
+    </div>
+    <!-- Card -->
+    
+  </div>
+  <div class="col mb-4">
+    <!-- Card -->
+    <div class="card">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+          alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+
+        <!--Title-->
+        <h4 class="card-title">Kasargodu</h4>
+        <!--Text-->
+        <p class="card-text">Kasaragod district is one of the 14 districts in the southern Indian state of Kerala. Kasaragod was a part of the South Canara district of the erstwhile Madras Presidency</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button>
+
+      </div>
+
+    </div>
+    <!-- Card -->
+    
+  </div>
+  <div class="col mb-4">
+    <!-- Card -->
+    <div class="card" style="color :white">
+
+      <!--Card image-->
+      <div class="view overlay">
+        <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+          alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div> -->
+
+      <!--Card content-->
+      <!-- <div class="card-body"> -->
+
+        <!--Title-->
+        <!-- <h4 class="card-title">Kasargodu</h4> -->
+        <!--Text-->
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the -->
+          <!-- card's content.</p> -->
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <!-- <button type="button" class="btn btn-light-blue btn-md bg-danger">Read more</button> -->
+
+      </div>
+
+    </div>
+    <!-- Card -->
+    
+  </div>
+  
+</div>
+
+</body>
+</html>

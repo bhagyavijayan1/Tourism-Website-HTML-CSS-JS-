@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body background="image/bg.jpg">
+    <a href="index.html" id="home"><img src="image/Home.png" alt=""> </a>  
+    <div class="Login">
+     <!-- Default form login -->
+    <form class="text-center border border-info p-5"action="explorer.html" onsubmit="return valid();">
+
+    <p class="h4 mb-4" text-align:centre>Log in</p>
+
+    <!-- Email -->
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" required>
+    <span id="error1"></span>
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" required>
+    <span id = "error2"></span>
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <!-- <button class="btn btn-info btn-block my-4 bg-danger"><a href="explore.html">Sign in</a></button> -->
+    <button type="submit" class="btn btn-info my-4 btn-block bg-danger" value='click here'>Log in</button>
+    <!-- Register -->
+    <p>Not a member?
+        <button type="button" class="btn btn-info my-4 btn-block bg-danger" onClick="location.href='Signup.html'" value='click here'>Signup</button>
+        <!-- Register -->
+        <!-- <a href="Signup.html">Register</a> -->
+    </p>
+
+</form>
+<!-- Default form login --> 
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
