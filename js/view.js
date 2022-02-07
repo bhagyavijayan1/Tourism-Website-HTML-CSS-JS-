@@ -1,1 +1,2 @@
-x
+new WOW().init();
+
